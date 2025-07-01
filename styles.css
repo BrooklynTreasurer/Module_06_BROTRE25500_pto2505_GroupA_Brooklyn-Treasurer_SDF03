@@ -74,3 +74,16 @@ img {
 .profile-settings-btn {
     font-size: 16px;
 }
+
+.profile-stats {
+    flex-basis: 100%;
+}
+
+.profile-stats ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
