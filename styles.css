@@ -94,3 +94,9 @@ img {
 .profile-stat-count {
     font-weight: 600;
 }
+
+.profile-bio {
+    flex-basis: 100%;
+    font-size: var(font-size);
+    margin-top: 10px;
+}
