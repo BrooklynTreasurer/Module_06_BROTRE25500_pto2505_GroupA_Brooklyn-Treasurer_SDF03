@@ -125,3 +125,21 @@ img {
     overflow: hidden;
     cursor: pointer;
 }
+
+.gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px 0;
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
