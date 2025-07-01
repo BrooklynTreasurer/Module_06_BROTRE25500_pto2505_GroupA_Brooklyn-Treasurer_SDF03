@@ -100,3 +100,7 @@ img {
     font-size: var(font-size);
     margin-top: 10px;
 }
+
+.profile-real-name {
+    font-weight: 600;
+}
