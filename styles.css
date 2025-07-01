@@ -48,3 +48,11 @@ img {
     object-fit: cover;
     border: 6px solid rgb(8, 91, 8);
 }
+
+.profile-user-settings {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+}
