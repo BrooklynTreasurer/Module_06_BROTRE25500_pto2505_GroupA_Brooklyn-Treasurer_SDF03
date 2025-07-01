@@ -71,6 +71,6 @@ img {
     cursor: pointer;
 }
 
-
-
-
+.profile-settings-btn {
+    font-size: 16px;
+}
