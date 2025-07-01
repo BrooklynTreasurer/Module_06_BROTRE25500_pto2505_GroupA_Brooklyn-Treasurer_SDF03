@@ -87,3 +87,10 @@ img {
     margin-top: 10px;
 }
 
+.profile-stats li {
+    font-size: var(font-size);
+}
+
+.profile-stat-count {
+    font-weight: 600;
+}
