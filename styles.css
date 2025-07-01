@@ -61,3 +61,16 @@ img {
     font-size: 28px;
     font-weight: lighter;
 }
+
+.profile-edit-btn,.profile-settings-btn {
+    font-size: 14px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+
+
+
