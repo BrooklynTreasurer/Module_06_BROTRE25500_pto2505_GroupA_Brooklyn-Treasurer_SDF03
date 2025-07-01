@@ -41,3 +41,10 @@ img {
     gap: 20px;
 }
 
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgb(8, 91, 8);
+}
