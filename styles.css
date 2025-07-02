@@ -20,6 +20,7 @@ body {
 
 img {
     display: block;
+    width: 100%;
 }
 
 .container {
@@ -88,7 +89,7 @@ img {
 }
 
 .profile-stats li {
-    font-size: var(font-size);
+    font-size: 14px;
 }
 
 .profile-stat-count {
@@ -97,7 +98,7 @@ img {
 
 .profile-bio {
     flex-basis: 100%;
-    font-size: var(font-size);
+    font-size: 14px;
     margin-top: 10px;
 }
 
@@ -106,52 +107,58 @@ img {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    margin-top: 26px;
-}
-
-.gallery-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-top: 26px;
 }
 
 .gallery-item {
-    position: relative;
-    padding-top: 100%;
-    width: 100%;
-    overflow: hidden;
-    cursor: pointer;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .gallery-item-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.4);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 10px 0;
+  position: absolute;
+  top: 0;   /* cover from top */
+  left: 0;
+  right: 0;
+  bottom: 0; /* cover to bottom */
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 10px;
+  text-align: center;
 }
 
 .gallery-item:hover .gallery-item-info {
-    opacity: 1;
+  opacity: 1;
+}
+
+
+.gallery-item:hover .gallery-item-info {
+  opacity: 1;
 }
 
 .gallery-item-type {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    color: white;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: white;
 }
+
 
