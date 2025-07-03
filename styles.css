@@ -108,31 +108,30 @@ img {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;  
     margin-top: 26px;
 }
 
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .gallery-item {
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    flex: 1 0 22rem;
+    margin: 1rem;
+    color: #fff;
     cursor: pointer;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
 }
 
 .gallery-item-info {
     position: absolute;
-    top: 0;   /* cover from top */
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 0; /* cover to bottom */
+    bottom: 0;
     background: rgba(0, 0, 0, 0.4);
     color: white;
     display: flex;
@@ -143,6 +142,41 @@ img {
     transition: opacity 0.3s ease;
     padding: 10px;
     text-align: center;
+}
+
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
+
+
+.gallery-item-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery-item-info li{
+    display: inline-block;
+}
+
+.visually-hidden {
+    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 .gallery-item:hover .gallery-item-info {
