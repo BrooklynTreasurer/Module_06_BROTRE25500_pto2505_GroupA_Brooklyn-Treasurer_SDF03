@@ -26,13 +26,14 @@ img {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 10px 20px;
 }
 
 .profile-image{
     display: flex;
     flex: 0 0 auto;
     justify-content: center;
+    margin-left: 30px;
 }
 
 .profile {
@@ -43,8 +44,8 @@ img {
 }
 
 .profile-image img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     object-fit: cover;
     border: 6px solid rgb(8, 91, 8);
@@ -56,6 +57,8 @@ img {
     flex: 1;
     align-items: center;
     gap: 10px;
+    margin-left: 20px;
+    margin-top: -100px;
 }
 
 .profile-user-name{
@@ -77,19 +80,17 @@ img {
 }
 
 .profile-stats {
-    flex-basis: 100%;
-}
-
-.profile-stats ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    margin-top: -250px;
+    width: calc(44% - 10px);
+    margin-left: 350px;
 }
 
 .profile-stats li {
+    display: inline-block;
     font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .profile-stat-count {
@@ -97,9 +98,11 @@ img {
 }
 
 .profile-bio {
-    flex-basis: 100%;
-    font-size: 14px;
-    margin-top: 10px;
+    margin-left: 300px;
+    width: calc(66.666% - 20px);
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -120px;
 }
 
 .profile-real-name {
@@ -110,7 +113,7 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 10px;  
-    margin-top: 26px;
+    margin-top: 0px;
 }
 
 .gallery-image {
@@ -215,4 +218,55 @@ img {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
 
+}
+
+@media (max-width: 900px) {
+    .profile-user-settings {
+        margin-top: 0;
+        margin-left: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .profile-stats {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .profile-bio {
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile-user-name {
+        font-size: 22px;
+    }
+
+    .profile-edit-btn,
+    .profile-settings-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
 }
